@@ -1,4 +1,4 @@
-package com.zain.social_authenticated.ui.model.response
+package com.zain.social_authenticated.model.response
 
 data class LoginResponse(
     val message : String? = "",

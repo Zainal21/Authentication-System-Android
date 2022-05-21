@@ -1,4 +1,4 @@
-package com.zain.social_authenticated.ui.base
+package com.zain.social_authenticated.base
 
 import android.content.Context
 import android.os.Bundle

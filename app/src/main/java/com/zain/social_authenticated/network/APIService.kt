@@ -1,6 +1,5 @@
-package com.zain.social_authenticated.ui.network
+package com.zain.social_authenticated.network
 
-import com.zain.social_authenticated.BuildConfig
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit

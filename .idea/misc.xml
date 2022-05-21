@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="app/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.194" />
+        <entry key="app/src/main/res/drawable/bg_btn_blue_primary.xml" value="0.194" />
+        <entry key="app/src/main/res/drawable/bg_btn_green_primary.xml" value="0.194" />
+        <entry key="app/src/main/res/drawable/bg_btn_plus_blue.xml" value="0.289" />
+        <entry key="app/src/main/res/drawable/bg_btn_white_primary.xml" value="0.289" />
+        <entry key="app/src/main/res/drawable/bg_gradient_primary_blue.xml" value="0.289" />
+        <entry key="app/src/main/res/drawable/bg_input_dua.xml" value="0.289" />
+        <entry key="app/src/main/res/drawable/bg_input_edit.xml" value="0.289" />
+        <entry key="app/src/main/res/drawable/bg_input_satu.xml" value="0.289" />
+        <entry key="app/src/main/res/drawable/bg_layout_white.xml" value="0.289" />
+        <entry key="app/src/main/res/drawable/bg_overlay_getstarted.xml" value="0.289" />
+        <entry key="app/src/main/res/drawable/bg_view_circle_picture.xml" value="0.289" />
+        <entry key="app/src/main/res/drawable/ic_launcher_background.xml" value="0.289" />
+        <entry key="app/src/main/res/font/poppins.xml" value="0.3921875" />
+        <entry key="app/src/main/res/layout-w1240dp/activity_login.xml" value="0.11947791164658635" />
+        <entry key="app/src/main/res/layout-w936dp/activity_login.xml" value="0.139453125" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.18" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

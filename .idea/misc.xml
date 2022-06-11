@@ -9,6 +9,7 @@
         <entry key="app/src/main/res/drawable/bg_btn_plus_blue.xml" value="0.289" />
         <entry key="app/src/main/res/drawable/bg_btn_white_primary.xml" value="0.289" />
         <entry key="app/src/main/res/drawable/bg_gradient_primary_blue.xml" value="0.289" />
+        <entry key="app/src/main/res/drawable/bg_gradient_primary_orange.xml" value="0.194" />
         <entry key="app/src/main/res/drawable/bg_input_dua.xml" value="0.289" />
         <entry key="app/src/main/res/drawable/bg_input_edit.xml" value="0.289" />
         <entry key="app/src/main/res/drawable/bg_input_satu.xml" value="0.289" />
@@ -19,7 +20,8 @@
         <entry key="app/src/main/res/font/poppins.xml" value="0.3921875" />
         <entry key="app/src/main/res/layout-w1240dp/activity_login.xml" value="0.11947791164658635" />
         <entry key="app/src/main/res/layout-w936dp/activity_login.xml" value="0.139453125" />
-        <entry key="app/src/main/res/layout/activity_login.xml" value="0.18" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_splash.xml" value="0.2" />
       </map>
     </option>
   </component>

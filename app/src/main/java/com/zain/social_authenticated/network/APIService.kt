@@ -1,5 +1,6 @@
 package com.zain.social_authenticated.network
 
+import com.zain.social_authenticated.BuildConfig
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -14,7 +15,7 @@ object APIService {
                 .addInterceptor(interceptor)
                 .build()
             val retrofit = Retrofit.Builder()
-                .baseUrl("BASE_API_URL")
+                .baseUrl(BuildConfig.BASE_API_URL)
                 .addConverterFactory(GsonConverterFactory.create())
                 .client(client)
                 .build()

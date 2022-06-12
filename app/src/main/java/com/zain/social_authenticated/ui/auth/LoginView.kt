@@ -12,6 +12,6 @@ interface LoginView {
     }
 
     interface Presenter : LoginView, BasePresenter{
-        fun sendAuthentication(requestLogin : LoginRequest)
+        fun sendAuthentication(username : String, password : String)
     }
 }

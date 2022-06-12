@@ -1,8 +1,8 @@
 package com.zain.social_authenticated.ui.auth
 
+import android.content.Intent
 import android.os.Bundle
 import android.os.Handler
-import android.os.Looper
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -10,6 +10,7 @@ import com.zain.social_authenticated.R
 import com.zain.social_authenticated.base.BaseActivity
 import com.zain.social_authenticated.model.request.LoginRequest
 import com.zain.social_authenticated.model.response.LoginResponse
+import com.zain.social_authenticated.ui.dashboard.DashboardActivity
 
 
 class LoginActivity : BaseActivity() , LoginView.View{
@@ -27,16 +28,20 @@ class LoginActivity : BaseActivity() , LoginView.View{
         super.onCreate(savedInstanceState)
         presenter = LoginPresenter(this)
         LoginRequest = LoginRequest()
+        setContentView(R.layout.activity_login)
         initComponents()
         initEventListener()
-        setContentView(R.layout.activity_login)
     }
 
     private fun initEventListener(){
-        LoginRequest.username = UsernameEditText.text.toString()
-        LoginRequest.password = UsernameEditText.text.toString()
+//        LoginRequest.username = UsernameEditText.text.toString()
+//        LoginRequest.password = PasswordEditText.text.toString()
         BtnSIgnIn.setOnClickListener {
-            presenter.sendAuthentication(LoginRequest)
+            if(UsernameEditText.text.toString() == "" || PasswordEditText.text.toString() == ""){
+                Toast.makeText(this, "Username/Password belum diisikan", Toast.LENGTH_SHORT).show();
+            }else{
+                presenter.sendAuthentication(UsernameEditText.text.toString(), PasswordEditText.text.toString())
+            }
         }
     }
 
@@ -47,6 +52,13 @@ class LoginActivity : BaseActivity() , LoginView.View{
     }
 
     override fun onSuccessLogin(response: LoginResponse) {
+        if(response.status == true){
+            val _intent = Intent(this@LoginActivity, DashboardActivity::class.java)
+            startActivity(_intent)
+            finish()
+        }else{
+            Toast.makeText(this, response.message, Toast.LENGTH_SHORT).show()
+        }
     }
 
     override fun onRejectLogin(message: String) {

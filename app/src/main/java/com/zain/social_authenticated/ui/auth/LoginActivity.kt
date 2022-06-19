@@ -17,7 +17,7 @@ class LoginActivity : BaseActivity() , LoginView.View{
 
     var doubleBackToExitPressedOnce = false
     private lateinit var presenter: LoginPresenter
-    private lateinit var BtnSIgnIn: Button
+    private lateinit var BtnSignIn: Button
     private lateinit var UsernameEditText: EditText
     private lateinit var PasswordEditText: EditText
     private lateinit var LoginRequest: LoginRequest
@@ -36,11 +36,13 @@ class LoginActivity : BaseActivity() , LoginView.View{
     private fun initEventListener(){
 //        LoginRequest.username = UsernameEditText.text.toString()
 //        LoginRequest.password = PasswordEditText.text.toString()
-        BtnSIgnIn.setOnClickListener {
+        BtnSignIn.setOnClickListener {
             if(UsernameEditText.text.toString() == "" || PasswordEditText.text.toString() == ""){
                 Toast.makeText(this, "Username/Password belum diisikan", Toast.LENGTH_SHORT).show();
             }else{
-                presenter.sendAuthentication(UsernameEditText.text.toString(), PasswordEditText.text.toString())
+                LoginRequest.username = UsernameEditText.text.toString()
+                LoginRequest.password = PasswordEditText.text.toString()
+                presenter.sendAuthentication(LoginRequest)
             }
         }
     }
@@ -48,7 +50,7 @@ class LoginActivity : BaseActivity() , LoginView.View{
     private fun initComponents(){
         UsernameEditText = findViewById(R.id.username)
         PasswordEditText = findViewById(R.id.password)
-        BtnSIgnIn = findViewById(R.id.btn_sign_in)
+        BtnSignIn = findViewById(R.id.btn_sign_in)
     }
 
     override fun onSuccessLogin(response: LoginResponse) {

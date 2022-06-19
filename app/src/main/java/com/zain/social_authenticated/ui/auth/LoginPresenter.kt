@@ -15,9 +15,9 @@ class LoginPresenter(
         this.mCompositeDisposable = CompositeDisposable()
     }
 
-    override fun sendAuthentication(username : String, password : String) {
+    override fun sendAuthentication(body: LoginRequest) {
         view.showLoading()
-        val disposable = APIService.endpoint.authenticated(username, password)
+        val disposable = APIService.endpoint.authenticated(body)
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe({

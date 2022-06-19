@@ -9,8 +9,6 @@ import retrofit2.http.FormUrlEncoded
 import retrofit2.http.POST
 
 interface APIInterface {
-    @FormUrlEncoded
     @POST("v1/auth/login")
-    fun authenticated(@Field("email") email: String,
-                      @Field("password") password: String) : Observable<LoginResponse>
+    fun authenticated(@Body body:LoginRequest) : Observable<LoginResponse>
 }
